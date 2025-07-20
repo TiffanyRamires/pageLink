@@ -23,7 +23,7 @@ function App() {
         <h2>Tiffany Ramires</h2>
       </header>
       
-      <div className="card">
+      <div className="cards-container">
         <Card 
           title="Privacy" 
           img={fotoBiquini}
@@ -37,7 +37,7 @@ function App() {
       </div>
       
       <footer className="footer">
-        <p>© 2024 Tiffany Ramires. Todos os direitos reservados.</p>
+        <p>© 2025 Tiffany Ramires. Todos os direitos reservados.</p>
       </footer>
     </div>
   );

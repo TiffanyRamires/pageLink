@@ -71,6 +71,9 @@ body {
   transition: var(--transition-slow);
   position: relative;
   z-index: 1;
+  /* Melhorias para touch */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .headerPerfil img:hover {
@@ -103,6 +106,10 @@ body {
 .card {
   padding: 2rem;
   background: var(--white);
+  /* Melhor espaçamento para mobile */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 /* Footer */
@@ -124,31 +131,32 @@ body {
   .container {
     margin: 0.5rem;
     border-radius: var(--radius-lg);
+    max-width: 100%;
   }
   
   .headerPerfil {
-    padding: 2rem 1.5rem 1.5rem;
+    padding: 2.5rem 2rem 2rem;
   }
   
   .headerPerfil img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
   }
   
   .headerPerfil h1 {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
   }
   
   .headerPerfil h2 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
   
   .card {
-    padding: 1.5rem;
+    padding: 2rem;
   }
   
   .footer {
-    padding: 1rem 1.5rem;
+    padding: 1.5rem 2rem;
   }
 }
 
@@ -157,13 +165,56 @@ body {
     margin: 0;
     border-radius: 0;
     min-height: 100vh;
+    max-width: 100%;
   }
   
   .headerPerfil {
-    padding: 1.5rem 1rem 1rem;
+    padding: 2rem 1.5rem 1.5rem;
+  }
+  
+  .headerPerfil img {
+    width: 140px;
+    height: 140px;
+    border-width: 5px;
+  }
+  
+  .headerPerfil h1 {
+    font-size: 1.375rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .headerPerfil h2 {
+    font-size: 2rem;
   }
   
   .card {
-    padding: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .footer {
+    padding: 1.25rem 1.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .headerPerfil {
+    padding: 1.75rem 1rem 1.25rem;
+  }
+  
+  .headerPerfil img {
+    width: 130px;
+    height: 130px;
+  }
+  
+  .headerPerfil h1 {
+    font-size: 1.25rem;
+  }
+  
+  .headerPerfil h2 {
+    font-size: 1.75rem;
+  }
+  
+  .card {
+    padding: 1.25rem;
   }
 }

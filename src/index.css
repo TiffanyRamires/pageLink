@@ -60,6 +60,10 @@ body {
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  /* Melhorias para mobile */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 /* Tipografia */
@@ -116,7 +120,25 @@ p {
 /* Responsividade */
 @media (max-width: 768px) {
   html {
-    font-size: 14px;
+    font-size: 16px;
+  }
+  
+  body {
+    padding: 0.75rem;
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 16px;
   }
   
   body {
@@ -124,10 +146,20 @@ p {
   }
   
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.875rem;
   }
   
   h2 {
-    font-size: 1.25rem;
+    font-size: 1.625rem;
+  }
+}
+
+@media (max-width: 360px) {
+  html {
+    font-size: 15px;
+  }
+  
+  body {
+    padding: 0.25rem;
   }
 }

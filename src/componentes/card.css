@@ -1,0 +1,176 @@
+/* Card individual */
+.card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  transition: var(--transition-slow);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: var(--shadow-sm);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  transform: scaleX(0);
+  transition: var(--transition-slow);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+.card:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-md);
+}
+
+/* Header do card (imagem) */
+.card-header {
+  flex-shrink: 0;
+  position: relative;
+}
+
+.card-header img {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  border: 2px solid var(--gray-200);
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.card:hover .card-header img {
+  border-color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+/* Body do card (texto) */
+.card-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.card-body p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  transition: var(--transition);
+}
+
+.card:hover .card-body p {
+  color: var(--primary-color);
+}
+
+/* Ícone de seta (opcional) */
+.card::after {
+  content: '→';
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+  color: var(--gray-400);
+  transition: var(--transition);
+  opacity: 0;
+}
+
+.card:hover::after {
+  opacity: 1;
+  color: var(--primary-color);
+  transform: translateY(-50%) translateX(4px);
+}
+
+/* Estados especiais */
+.card.primary {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  border-color: var(--primary-color);
+  color: var(--white);
+}
+
+.card.primary .card-body p {
+  color: var(--white);
+}
+
+.card.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .card {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+  
+  .card-header img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .card-body p {
+    font-size: 1rem;
+  }
+  
+  .card::after {
+    right: 1rem;
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 0.875rem;
+    gap: 0.625rem;
+  }
+  
+  .card-header img {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .card-body p {
+    font-size: 0.9375rem;
+  }
+}

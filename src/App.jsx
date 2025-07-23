@@ -16,26 +16,22 @@ function App() {
   }, []);
 
   return (
-    <div className={`container ${isLoaded ? 'loaded' : ''}`}>
+    <div className={`container ${isLoaded ? "loaded" : ""}`}>
       <header className="headerPerfil">
         <img src={fotoPerfil} alt="Tiffany Ramires" />
         <h1>@tiffany.ramires</h1>
         <h2>Tiffany Ramires</h2>
       </header>
-      
+
       <div className="cards-container">
-        <Card 
-          title="Privacy" 
-          img={fotoBiquini}
-          link="#"
-        />
-        <Card 
-          title="Twitter" 
+        <Card title="Privacy" img={fotoBiquini} link="#" />
+        <Card
+          title="Twitter"
           img={fotoCalcinha}
-          link="#"
+          link="https://x.com/TiffnyRamires"
         />
       </div>
-      
+
       <footer className="footer">
         <p>© 2025 Tiffany Ramires. Todos os direitos reservados.</p>
       </footer>

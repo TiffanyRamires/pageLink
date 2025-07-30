@@ -33,10 +33,10 @@ function App() {
         />
          <Card
           title="Telegram"
-          img={fotoBiquini}
+          img={fotoBiquini  }
           link="https://t.me/BrunaGomesofc_bot"
         />
-        <Card title="Privacy" img={fotoBunda} link="https://onlyfans.com/u513526915" />
+        <Card title="OnlyFans" img={fotoBunda} link="https://onlyfans.com/u513526915" />
      
       </div>
 

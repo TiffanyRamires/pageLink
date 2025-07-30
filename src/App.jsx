@@ -24,7 +24,7 @@ function App() {
       </header>
 
       <div className="cards-container">
-        <Card title="Privacy" img={fotoBiquini} link="#" />
+        <Card title="Privacy" img={fotoBiquini} link="https://onlyfans.com/u513526915" />
         <Card
           title="Twitter"
           img={fotoCalcinha}

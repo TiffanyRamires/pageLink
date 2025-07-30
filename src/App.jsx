@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import fotoPerfil from "./assets/perfil4.png";
 import fotoBiquini from "./assets/biquini.png";
 import fotoCalcinha from "./assets/calcinha.png";
+import fotoBunda from "./assets/bunda2.png";
+
 
 import "./App.css";
 
@@ -24,12 +26,18 @@ function App() {
       </header>
 
       <div className="cards-container">
-        <Card title="Privacy" img={fotoBiquini} link="https://onlyfans.com/u513526915" />
-        <Card
+      <Card
           title="Twitter"
           img={fotoCalcinha}
           link="https://x.com/TiffnyRamires"
         />
+         <Card
+          title="Telegram"
+          img={fotoBiquini}
+          link="https://t.me/BrunaGomesofc_bot"
+        />
+        <Card title="Privacy" img={fotoBunda} link="https://onlyfans.com/u513526915" />
+     
       </div>
 
       <footer className="footer">
